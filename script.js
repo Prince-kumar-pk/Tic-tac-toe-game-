@@ -83,8 +83,15 @@ function gameOver(gameWon) {
 
 function declareWinner(who) {
   //who -> you won! or you lose
+  if (who === "You win!") {
+    document.querySelector(".endgame").style.backgroundColor  = "Green";
+  }
+  else{
+    document.querySelector(".endgame").style.backgroundColor  = "Red";
+  }
   document.querySelector(".endgame").style.display = "block";
   document.querySelector(".endgame .text").innerText = who;
+
 }
 
 function emptySquares() {
